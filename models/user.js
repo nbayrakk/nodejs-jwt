@@ -38,7 +38,6 @@ const hashedPassword = ()=>{
             bcrypt.hash(u.password, salt, (err, hash) => {
                 if (err) next(err);
                 u.password = hash;
-                next();
             });
         });
     })
